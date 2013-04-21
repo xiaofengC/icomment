@@ -1,0 +1,42 @@
+{
+  "name": "iComment",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Empty.",
+
+
+  "background":{
+    "scripts":["md5.js","socket.io.js","background.js"]
+  },
+
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  /*
+  "content_scripts":[{
+    "css":["icCS.css"],
+    "js":["jqmin.js", "sidebar.js","jq_sexy_textarea.js","icCS_roomBase.js","icCS_roomExt.js"],
+    //"js":["jqmin.js", "icCS_roomExt.js"],
+    "matches":[
+      "*://*.cnn.com/*"
+    ],
+    "run_at":"document_idle" 
+  }],
+  */
+
+  "permissions": [
+    "tabs",
+    "*://*.cnn.com/*"
+  ],
+
+  //all embed res need to be claimed here
+   "web_accessible_resources":[
+      "logo.png" 
+  ]
+  
+  "manifest_version": 2,
+  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'; connect-src http://192.168.13.129;
+}
+

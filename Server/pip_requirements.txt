@@ -1,0 +1,4 @@
+gevent
+MySQL-python
+gevent-websocket
+gevent-socketio
